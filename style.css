@@ -141,7 +141,7 @@ p {
 /* FOOTER */
 footer {
 	margin-top: 30px;
-	padding-top: 20px;
+	padding: 15px 0 15px 0;
 	height: 50px;
 	text-align: center;
 	background: #660066;
@@ -156,7 +156,7 @@ footer {
 footer a {
 	text-decoration: none;
 	color: #fff;
-	font-size: 10px;
+	font-size: 8px;
 }
 
 /* TABLET */
