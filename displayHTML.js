@@ -1,3 +1,4 @@
+//What we display when loading the site
 const displayUI = data => {
   document.getElementById("restaurantList").innerHTML = "";
 
@@ -18,6 +19,7 @@ const displayUI = data => {
   });
 };
 
+//What we display when the filter functions is invoked
 const displayUIfiltered = data => {
   document.getElementById("restaurantList").innerHTML = "";
   numbers = data.length

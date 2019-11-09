@@ -1,12 +1,11 @@
+//Script for fetching the API and what to dispay on default
+
 const apiKey = "93dfda349bc834d0a83157076ecca92f";
-
 const cityId = 91; // Dublin
-
 const cityDescription = "Dublin";
-const cuisineId = 82; // Pzza
+const cuisineId = 82; // Pizza
 const cuisineDescription = "Pizza";
 let numbers = 0
-console.log(numbers)
 let filteredCuisines = [];
 
 let restoArray = [];
