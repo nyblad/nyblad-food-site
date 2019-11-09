@@ -1,41 +1,49 @@
-//What we display when loading the site
+//What we display as default
 const displayUI = data => {
-  document.getElementById("restaurantList").innerHTML = "";
 
-  data.forEach(restaurant => {
-    document.getElementById(
-      "restaurantList"
-    ).innerHTML += `<div class="restaurant-card">
-    <div class="card-img" style="background-image: url(${restaurant.restaurant.thumb})">
-    
-    <div class="bubble">€${restaurant.restaurant.average_cost_for_two}</div>
-    </div>
-    <div class="card-info">
-    <li><h2>${restaurant.restaurant.name}</h2></li>
-    <p class="card-rating">	&#9733; ${restaurant.restaurant.user_rating.aggregate_rating} ${restaurant.restaurant.user_rating.rating_text}</p>
-    <p>${restaurant.restaurant.location.address}</p>
-    </div>
-    </div>`;
+  //To clear the restaurant listing before printing the default
+  document.getElementById("restaurant-list").innerHTML = "";
+
+  //Iterate over the restaurants and print to the HTML
+  data.forEach(restos => {
+    document.getElementById("restaurant-list").innerHTML +=
+      `<div class="restaurant-card">
+      <div class="card-img" style="background-image: url(${restos.restaurant.thumb})">
+        <div class="bubble">€${restos.restaurant.average_cost_for_two}</div>
+      </div>
+      <div class="card-info">
+        <li><h2>${restos.restaurant.name}</h2></li>
+        <p class="card-rating">	&#9733; ${restos.restaurant.user_rating.aggregate_rating} ${restos.restaurant.user_rating.rating_text}</p>
+        <p>${restos.restaurant.location.address}</p>
+      </div>
+    </div>`
   });
+
 };
 
 //What we display when the filter functions is invoked
 const displayUIfiltered = data => {
-  document.getElementById("restaurantList").innerHTML = "";
+
+  //To clear the restaurant listing before printing the filtered
+  document.getElementById("restaurant-list").innerHTML = "";
+
+  //To print how many restaurants is filtered
   numbers = data.length
   document.getElementById("restaurant-number").innerHTML = `${numbers} restaurants is filtered`
-  data.forEach(restaurant => {
-    document.getElementById(
-      "restaurantList"
-    ).innerHTML += `<div class="restaurant-card">
-    <div class="card-img" style="background-image: url(${restaurant.thumb})">
-    <div class="bubble">€${restaurant.average_cost_for_two}</div>
-    </div>
-    <div class="card-info">
-    <li><h2>${restaurant.name}</h2></li>
-    <p class="card-rating">	&#9733; ${restaurant.user_rating.aggregate_rating} ${restaurant.user_rating.rating_text}</p>
-    <p>${restaurant.location.address}</p>
-    </div>
-    </div>`;
+
+  //Iterate over the restaurants and print to the HTML
+  data.forEach(restos => {
+    document.getElementById("restaurant-list").innerHTML +=
+      `<div class="restaurant-card">
+      <div class="card-img" style="background-image: url(${restos.thumb})">
+        <div class="bubble">€${restos.average_cost_for_two}</div>
+      </div>
+      <div class="card-info">
+        <li><h2>${restos.name}</h2></li>
+        <p class="card-rating">	&#9733; ${restos.user_rating.aggregate_rating} ${restos.user_rating.rating_text}</p>
+        <p>${restos.location.address}</p>
+      </div>
+    </div>`
   });
+
 };
