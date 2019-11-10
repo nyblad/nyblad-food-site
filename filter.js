@@ -30,7 +30,7 @@ const sortByPrice = restoArray => {
 //Function for filtering on price range
 const filterPriceRange = () => {
 	//Gets the chosen value in the form
-	const priceRangeElement = document.getElementById("priceRanges").value;
+	const priceRangeElement = document.getElementById("price-ranges").value;
 	//Split the chosen value since there are two values in the coice
 	const priceRange = priceRangeElement.split("-");
 	//Creates a variable for each chosen value
@@ -51,23 +51,23 @@ const filterPriceRange = () => {
 
 //ADD EVENT LISTENER
 //Declare the the filter-form from HTML
-const form = document.getElementById("filter");
+const form = document.getElementById("filters");
 
 //Adds eventlistener when submitting the filter-form
 form.addEventListener("submit", e => {
 	e.preventDefault();
 
 	//If the option for price ranges is anything but none, invoke the function for filterPriceRange
-	if (document.getElementById("priceRanges").value !== "no-price") {
+	if (document.getElementById("price-ranges").value !== "no-price") {
 		filterPriceRange();
 	}
 	//If the option for sorting y price is checked, invoke the function sortByPrice with the argument filteredCuisines
-	if (document.getElementById("sortByPrice").checked) {
+	if (document.getElementById("sort-by-price").checked) {
 		sortByPrice(filteredCuisines);
 	}
 	//If the option for review ranges is anything bot none, ??
-	if (document.getElementById("reviewRanges").value !== "no-review") {
-		const review = document.getElementById("reviewRanges").value;
+	if (document.getElementById("review-ranges").value !== "no-review") {
+		const review = document.getElementById("review-ranges").value;
 		filteredCuisines = filterOnReviews(filteredCuisines, review);
 	}
 

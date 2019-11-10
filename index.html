@@ -12,19 +12,19 @@
 
 <body>
 	<header>
-		<img src="pizza.png" />
+		<img src="pizza.png" alt="logo" />
 		<h1>Pizza in Dublin</h1>
 	</header>
 
 	<section class="restaurant-container">
 		<div class="form-filter">
-			<form id="filter">
+			<form name="filtering-form" id="filters">
 				<h2>Filter restaurants</h2>
 
 				<div class="filter-containers">
 					<label>
 						Price
-						<select id="priceRanges" name="prices" form="filterPrice">
+						<select id="price-ranges" name="prices">
 							<option value="0-100">-</option>
 							<option value="0-20">€0-20</option>
 							<option value="20-40">€20-40</option>
@@ -36,7 +36,7 @@
 
 					<label>
 						Reviews
-						<select id="reviewRanges" name="review" form="filterReview">
+						<select id="review-ranges" name="review">
 							<option value="no-review">-</option>
 							<option value="Good">Good</option>
 							<option value="Very Good">Very good</option>
@@ -45,11 +45,11 @@
 
 					<label>
 						Sort by price
-						<input type="checkbox" id="sortByPrice" value="Sort by price" />
+						<input type="checkbox" id="sort-by-price" value="Sort by price" />
 					</label>
 				</div>
 
-				<input class="btn" id="priceSubmit" type="submit" value="Apply" />
+				<input class="btn" id="price-submit" type="submit" value="Apply" />
 			</form>
 
 			<div id="restaurant-number"></div>
